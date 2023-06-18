@@ -1,0 +1,8 @@
+body{
+    background-color:#0077be;
+}
+h1 , p {
+    text-align: center;
+    padding-block-start: 100px;
+    color: aliceblue;
+} 
