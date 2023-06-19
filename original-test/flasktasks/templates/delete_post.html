@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Posts Section - Delete Post</h1>
+    <hr>
+    {% if post.author == current_user %}
+        <p>Are you sure you want to delete this post?</p>
+        <form method="POST" action="{{ url_for('delete_post', id=post.id) }}">
+        <button type="submit">Yes, delete it</button>
+        </form>
+    {% else %}
+    <p>You are not authorized to delete this post.</p>
+    {% endif %}
+{% endblock content %}
+
